@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="actprogtype.cpp" />
     <ClCompile Include="actutltype.cpp" />
+    <ClCompile Include="actutltype_rpc.grpc.pb.cc" />
+    <ClCompile Include="actutltype_rpc.pb.cc" />
     <ClCompile Include="sampleEng2017.cpp" />
     <ClCompile Include="sampleEngDlg.cpp" />
     <ClCompile Include="StdAfx.cpp">
@@ -154,7 +156,10 @@
   <ItemGroup>
     <ClInclude Include="actprogtype.h" />
     <ClInclude Include="actutltype.h" />
+    <ClInclude Include="actutltype_rpc.grpc.pb.h" />
+    <ClInclude Include="actutltype_rpc.pb.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="rpc.hpp" />
     <ClInclude Include="sampleEng2017.h" />
     <ClInclude Include="sampleEngDlg.h" />
     <ClInclude Include="StdAfx.h" />

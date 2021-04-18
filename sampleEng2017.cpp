@@ -2,9 +2,22 @@
 //
 
 #include "stdafx.h"
+
+
+//thread t1(RunServer);
+
+
 #include "sampleEng2017.h"
 #include "sampleEngDlg.h"
 
+#include "actutltype_rpc.grpc.pb.h"
+#include <thread>
+
+
+using std::thread;
+CSampleEngDlg* g_dlg=NULL;
+#include "rpc.hpp"
+thread t1(RunServer);
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
@@ -50,7 +63,9 @@ BOOL CSampleEngApp::InitInstance()
 
 	CSampleEngDlg dlg;
 	m_pMainWnd = &dlg;
+	g_dlg = &dlg;	
 	int nResponse = dlg.DoModal();
+	
 	if (nResponse == IDOK)
 	{
 		// TODO: Place code here to handle when the dialog is
